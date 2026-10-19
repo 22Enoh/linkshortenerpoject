@@ -12,7 +12,15 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 This is a link shortener built with Next.js (App Router), Clerk, Drizzle ORM on Neon Postgres, Tailwind CSS v4, and shadcn/ui.
 
-**Before writing or changing any code, read the relevant standards file(s) in `/docs` below. These rules are mandatory; follow them over general habits or memorized patterns.**
+## CRITICAL: READ THE `/docs` FILES FIRST
+
+**It is incredibly important that you ALWAYS read the relevant individual instruction file(s) in the `/docs` directory BEFORE generating ANY code.** No exceptions: this applies to every change, however small (new files, edits, refactors, fixes, config, styling).
+
+- Identify every file in the Standards Index below that applies to the task, and read each one in full before writing any code.
+- If a task spans multiple areas (e.g. UI + auth + database), read ALL of the matching files.
+- Do not rely on memory, prior conversation, or general habits. Re-read the files each time.
+- These rules are mandatory and override general habits or memorized patterns.
+- Code generated without first reading the relevant `/docs` files is considered incorrect.
 
 ## Standards Index
 
@@ -26,8 +34,8 @@ This is a link shortener built with Next.js (App Router), Clerk, Drizzle ORM on 
 
 ## Non-Negotiables
 
+- ALWAYS read the relevant `/docs` instruction file(s) BEFORE generating ANY code.
 - Verify Next.js APIs against `node_modules/next/dist/docs/` rather than assuming.
-ALWAYS refer to the relevant .md file BEfore generating any code:
 - Use Clerk for all auth; the Clerk `userId` from `auth()` is the only trusted identity.
 - Every query or mutation on user-owned data must be scoped to the authenticated user.
 - Database access is server-only via `db` from `db/index.ts`.
