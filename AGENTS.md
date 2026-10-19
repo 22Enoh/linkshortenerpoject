@@ -20,9 +20,9 @@ This is a link shortener built with Next.js (App Router), Clerk, Drizzle ORM on 
 | --- | --- |
 | Layout, folders, commands, general rules | [docs/project-structure.md](docs/project-structure.md) |
 | TypeScript, Server/Client Components, routing, Server Actions, code style | [docs/typescript-and-nextjs.md](docs/typescript-and-nextjs.md) |
-| Sign-in, sign-up, protected routes, user identity | [docs/authentication.md](docs/authentication.md) |
+| Clerk-only auth, protected `/dashboard`, homepage redirect, modal sign-in/sign-up, user identity | [docs/authentication.md](docs/authentication.md) |
 | Schema, migrations, queries, data access | [docs/database.md](docs/database.md) |
-| Components, shadcn/ui, Tailwind styling, accessibility | [docs/ui-components.md](docs/ui-components.md) |
+| Any UI work: shadcn/ui-only components (no custom components), Tailwind styling, accessibility | [docs/ui-components.md](docs/ui-components.md) |
 
 ## Non-Negotiables
 
@@ -31,6 +31,7 @@ ALWAYS refer to the relevant .md file BEfore generating any code:
 - Use Clerk for all auth; the Clerk `userId` from `auth()` is the only trusted identity.
 - Every query or mutation on user-owned data must be scoped to the authenticated user.
 - Database access is server-only via `db` from `db/index.ts`.
-- Use shadcn/ui primitives, `cn()`, and theme tokens; do not hard-code colors.
+- ALL UI uses shadcn/ui components. Never create custom components; add missing ones via `npx shadcn@latest add`.
+- Use `cn()` and theme tokens; do not hard-code colors.
 - Validate all external input; never hard-code or expose secrets.
 - Keep changes minimal and scoped to the request; run `npm run lint` before finishing.
