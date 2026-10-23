@@ -6,8 +6,7 @@ import {
   MousePointer2,
   ShieldCheck,
 } from "lucide-react";
-import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -15,7 +14,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -68,16 +66,6 @@ export default function Home() {
                   <ArrowRight aria-hidden="true" />
                 </Button>
               </SignUpButton>
-              <Link
-                href="#features"
-                className={cn(
-                  buttonVariants({ size: "lg", variant: "outline" }),
-                  "gap-2",
-                )}
-              >
-                Explore features
-                <ArrowRight aria-hidden="true" />
-              </Link>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
               No fuss. Just better links.
