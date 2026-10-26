@@ -36,6 +36,7 @@ This is a link shortener built with Next.js (App Router), Clerk, Drizzle ORM on 
 
 - ALWAYS read the relevant `/docs` instruction file(s) BEFORE generating ANY code.
 - Verify Next.js APIs against `node_modules/next/dist/docs/` rather than assuming.
+- NEVER use `middleware.ts`. It is deprecated in later versions of Next.js, including the version used in this project. Use `src/proxy.ts` instead (it already exists; extend it rather than creating a middleware file).
 - Use Clerk for all auth; the Clerk `userId` from `auth()` is the only trusted identity.
 - Every query or mutation on user-owned data must be scoped to the authenticated user.
 - Database access is server-only via `db` from `db/index.ts`.
