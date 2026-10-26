@@ -1,0 +1,23 @@
+{
+  "skill_name": "links-monthly-chart",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "can you give me a chart of how many short links got created each month over the last year? save it as a png",
+      "expected_output": "A PNG with 12 monthly bars (oldest to newest), labeled axes, produced via the Python script; DATABASE_URL never printed.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want to see link growth over time for the dashboard review tomorrow, put the image at reports/links-growth.png",
+      "expected_output": "PNG saved at reports/links-growth.png with the same 12-month bar chart.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "how many links did we create last month vs the month before? a quick graph would be great",
+      "expected_output": "Chart generated and the last two months' counts quoted from the script output.",
+      "files": []
+    }
+  ]
+}
