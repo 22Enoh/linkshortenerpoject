@@ -12,29 +12,9 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 This is a link shortener built with Next.js (App Router), Clerk, Drizzle ORM on Neon Postgres, Tailwind CSS v4, and shadcn/ui.
 
-## CRITICAL: READ THE `/docs` FILES FIRST
-
-**It is incredibly important that you ALWAYS read the relevant individual instruction file(s) in the `/docs` directory BEFORE generating ANY code.** No exceptions: this applies to every change, however small (new files, edits, refactors, fixes, config, styling).
-
-- Identify every file in the Standards Index below that applies to the task, and read each one in full before writing any code.
-- If a task spans multiple areas (e.g. UI + auth + database), read ALL of the matching files.
-- Do not rely on memory, prior conversation, or general habits. Re-read the files each time.
-- These rules are mandatory and override general habits or memorized patterns.
-- Code generated without first reading the relevant `/docs` files is considered incorrect.
-
-## Standards Index
-
-| Working on... | Read first |
-| --- | --- |
-| Layout, folders, commands, general rules | [docs/project-structure.md](docs/project-structure.md) |
-| TypeScript, Server/Client Components, routing, Server Actions, code style | [docs/typescript-and-nextjs.md](docs/typescript-and-nextjs.md) |
-| Clerk-only auth, protected `/dashboard`, homepage redirect, modal sign-in/sign-up, user identity | [docs/authentication.md](docs/authentication.md) |
-| Schema, migrations, queries, data access | [docs/database.md](docs/database.md) |
-| Any UI work: shadcn/ui-only components (no custom components), Tailwind styling, accessibility | [docs/ui-components.md](docs/ui-components.md) |
 
 ## Non-Negotiables
 
-- ALWAYS read the relevant `/docs` instruction file(s) BEFORE generating ANY code.
 - Verify Next.js APIs against `node_modules/next/dist/docs/` rather than assuming.
 - NEVER use `middleware.ts`. It is deprecated in later versions of Next.js, including the version used in this project. Use `src/proxy.ts` instead (it already exists; extend it rather than creating a middleware file).
 - Use Clerk for all auth; the Clerk `userId` from `auth()` is the only trusted identity.
